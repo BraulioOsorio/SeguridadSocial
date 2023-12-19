@@ -1,0 +1,41 @@
+.card-style {
+  transition: transform 0.9s;
+  }
+    
+  .card-style:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .giracion:hover{
+    animation: spin 3s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); 
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+  }
+
+  .sacudelo {
+    transition: transform 0.3s ease;
+  }
+
+  .sacudelo:hover {
+    animation: shake 0.3s ease;
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0); /* Sin traslado en el inicio y el final */
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-2px); /* Traslado a la izquierda */
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(2px); /* Traslado a la derecha */
+    }
+  }
